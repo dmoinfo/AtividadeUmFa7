@@ -17,7 +17,12 @@ public class Terceirizado extends Funcionario {
 	}
 
 	public void receberVales() {
-
+		System.out.println("Pagamento dos vales efetuado com sucesso");
 	}
-
+	
+	@Override
+	public void receberSalario(String nome) {
+		super.receberSalario(nome);
+		receberVales();
+	}
 }

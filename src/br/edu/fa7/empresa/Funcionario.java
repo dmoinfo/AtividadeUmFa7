@@ -4,11 +4,6 @@ public class Funcionario implements Trabalhador{
 	
 	private String nome;
 	private int matricula;
-
-	@Override
-	public void receberSalario() {
-		System.out.println("Salário recebido");
-	}
 	
 	public Funcionario(int matricula) {
 		this.matricula = matricula;
@@ -17,6 +12,11 @@ public class Funcionario implements Trabalhador{
 	public Funcionario(String nome, int matricula) {
 		this(matricula);
 		this.nome = nome;		
+	}
+	
+	@Override
+	public void receberSalario(String nome) {
+		System.out.println(nome + " recebeu o salário");
 	}
 
 	public String getNome() {
